@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name yeomanDonderdagApp.controller:AboutCtrl
+ * @name gruntmini.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the yeomanDonderdagApp
+ * Controller of the gruntmini
  */
-angular.module('yeomanDonderdagApp')
+angular.module('gruntmini')
     .controller('AboutCtrl', function () {
         this.awesomeThings = [
             'HTML5 Boilerplate',

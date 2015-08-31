@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name yeomanDonderdagApp.controller:MainCtrl
+ * @name gruntmini.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the yeomanDonderdagApp
+ * Controller of the gruntmini
  */
-angular.module('yeomanDonderdagApp')
+angular.module('gruntmini')
     .controller('MainCtrl', function () {
         this.awesomeThings = [
            'hoera'

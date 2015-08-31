@@ -2,23 +2,23 @@
 
 /**
  * @ngdoc overview
- * @name yeomanDonderdagApp
+ * @name gruntmini
  * @description
- * # yeomanDonderdagApp
+ * # gruntmini
  *
  * Main module of the application.
  */
 angular
-  .module('yeomanDonderdagApp', ['ngRoute'])
+  .module('gruntmini', ['ngRoute'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'app/views/main.html',
+        templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
       .when('/about', {
-        templateUrl: 'app/views/about.html',
+        templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
