@@ -1,10 +1,10 @@
 module.exports = function (grunt) {
 
-    //require('jit-grunt')(grunt, {
-    //    useminPrepare: 'grunt-usemin',
-    //    ngtemplates: 'grunt-angular-templates',
-    //    cdnify: 'grunt-google-cdn'
-    //});
+    require('jit-grunt')(grunt, {
+        useminPrepare: 'grunt-usemin',
+        ngtemplates: 'grunt-angular-templates',
+        cdnify: 'grunt-google-cdn'
+    });
 
     // Project configuration.
     grunt.initConfig({
