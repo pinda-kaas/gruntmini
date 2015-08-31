@@ -1,5 +1,11 @@
 module.exports = function (grunt) {
 
+    //require('jit-grunt')(grunt, {
+    //    useminPrepare: 'grunt-usemin',
+    //    ngtemplates: 'grunt-angular-templates',
+    //    cdnify: 'grunt-google-cdn'
+    //});
+
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -24,6 +30,35 @@ module.exports = function (grunt) {
                         'dist/{,*/'
                     ]
                 }]
+            }
+        },
+        htmlmin: {
+            dist: {
+                options: {
+                    collapseWhitespace: true,
+                    conservativeCollapse: true,
+                    collapseBooleanAttributes: true,
+                    removeCommentsFromCDATA: true
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeoman.dist %>',
+                    src: ['*.html'],
+                    dest: '<%= yeoman.dist %>'
+                }]
+            }
+        },
+
+        ngtemplates: {
+            dist: {
+                options: {
+                    module: 'gruntmini',
+                    htmlmin: '<%= htmlmin.dist.options %>',
+                    usemin: 'scripts/scripts.js'
+                },
+                cwd: 'app>',
+                src: 'views/{,*/}*.html',
+                dest: '.tmp/templateCache.js'
             }
         },
         ngAnnotate: {
@@ -121,6 +156,7 @@ module.exports = function (grunt) {
         'wiredep',
 
         'useminPrepare',
+        'ngtemplates',
         'concat',
         'ngAnnotate',
         'copy:dist',
