@@ -30,6 +30,8 @@
     "grunt-svgmin": "^2.0.0",
     "grunt-usemin": "^3.1.1",
     "grunt-wiredep": "^2.0.0",
-    "jit-grunt": "^0.9.1"
+    "jit-grunt": "^0.9.1",
+    "jshint-stylish": "^2.0.1",
+    "time-grunt": "^1.2.1"
   }
 }
